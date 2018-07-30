@@ -29,7 +29,7 @@ func main() {
 		if lines == nil {
 			continue
 		}
-		
+
 		lastIndex := len(lines) - 1
 
 		var showStart int = lastIndex - *n
@@ -39,16 +39,14 @@ func main() {
 			showStart = 0
 		}
 		showLines := lines[showStart:]
-		
 
 		for _, line := range showLines {
 			fmt.Println(line)
 		}
-		
+
 		fmt.Println("/////////////////////////////////////")
 	}
 }
-
 
 func readFile(file string) []string {
 	fp, err := os.Open(file)
